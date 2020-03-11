@@ -10,9 +10,12 @@
   <main>
     <h1 id="noTime">TIME IS RUNNING OUT!</h1>
     <form action="">
-      <input type="text" name="" id="taskName" placeholder="enter task here" required><br>
+      <div id="formGroup">
+        <input type="text" name="" id="taskName" placeholder="enter task here"><br>
+        <p id="required">*this field is required</p>
+      </div>
       <input type="number" name="" id="time" placeholder="specify time in minute"> 
-      <input type="submit" value="Add Task" id="addTask">
+      <input type="button" value="Add Task" id="addTask">
     </form>
     <div id="lineBreak"></div>
     <div id="taskList">
@@ -21,18 +24,19 @@
         <div class="options">
           <span class="timer">00:00</span>
           <button class="start">start</button>
-          <button class="delete">delete</button>
+          <button class="delete" onclick="deleteTask(this)">delete</button>
         </div>
       </div>
       <div class="taskItem">
         <p class="item">task2</p>
         <div class="options">
-          <input type="number" name="" id="time2">
+          <input type="number" name="" id="time2" placeholder="specify time in minute">
           <button id="addTime">add time</button>
         </div>
       </div>
     </div>
     <input type="button" value="Clear All" id="clear">
   </main>
+  <script src="app.js"></script>
 </body>
 </html>
