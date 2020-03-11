@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do list</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1 id="noTime">TIME IS RUNNING OUT!</h1>
+    <form action="">
+      <input type="text" name="" id="taskName" placeholder="enter task here" required><br>
+      <input type="number" name="" id="time" placeholder="specify time in minute"> 
+      <input type="submit" value="Add Task" id="addTask">
+    </form>
+    <div id="lineBreak"></div>
+    <div id="taskList">
+      <div class="taskItem">
+        <p class="item">task1</p>
+        <div class="options">
+          <span class="timer">00:00</span>
+          <button class="start">start</button>
+          <button class="delete">delete</button>
+        </div>
+      </div>
+      <div class="taskItem">
+        <p class="item">task2</p>
+        <div class="options">
+          <input type="number" name="" id="time2">
+          <button id="addTime">add time</button>
+        </div>
+      </div>
+    </div>
+    <input type="button" value="Clear All" id="clear">
+  </main>
+</body>
+</html>
