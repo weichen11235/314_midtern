@@ -18,24 +18,7 @@
       <input type="button" value="Add Task" id="addTask">
     </form>
     <div id="lineBreak"></div>
-    <div id="taskList">
-      <div class="taskItem">
-        <p class="item">task1</p>
-        <div class="options">
-          <span class="timer">00:00</span>
-          <button class="start" onclick="timeStart(this)">start</button>
-          <button class="delete" onclick="deleteTask(this)">delete</button>
-        </div>
-      </div>
-      <div class="taskItem">
-        <p class="item">task2</p>
-        <div class="options">
-          <input type="number" name="" id="time2" placeholder="specify time in minute">
-          <button id="addTime" onclick="timeAdder(Number(document.getElementById('time2').value), this)">add time</button>
-          <button class="delete" onclick="deleteTask(this)">delete</button>
-        </div>
-      </div>
-    </div>
+    <div id="taskList"></div>
     <input type="button" value="Clear All" id="clear">
   </main>
   <script src="app.js"></script>
