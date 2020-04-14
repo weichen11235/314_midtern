@@ -3,6 +3,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+p{
+  padding-bottom: 5px;
+}
+
+.eventContent{
+  padding-bottom: 15px;
+}
 #slider{
   width: 800px;
   height: 250px;
@@ -68,5 +76,7 @@
 #accordion{
   width: 800px;
   margin: auto;
+  height: 380px;
 }
+
 

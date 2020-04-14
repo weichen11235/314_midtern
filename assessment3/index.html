@@ -5,25 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="slider">
     <div id="content1" class="content">
-      <h4>Upcoming Event at Venue1</h1>
-      <h1>Lorem, ipsum.</h1>
-      <p>12:15pm 12/15/20</p>
+      <h4>Upcoming Event at Little Café</h1>
+      <h1 id='event1'></h1>
+      <p id='time1'></p>
     </div>
     <div id="content2" class="content">
-      <h4>Upcoming Event at Venue2</h1>
-      <h1>cafe latte</h1>
-      <p>12:15pm 12/15/20</p>
+      <h4>Upcoming Event at Big Hall</h1>
+      <h1 id='event2'></h1>
+      <p id='time2'></p>
     </div>
     <div id="content3" class="content">
-      <h4>Upcoming Event at Venue3</h1>
-      <h1>mocha mocha</h1>
-      <p>12:15pm 12/15/20</p>
+      <h4>Upcoming Event at Smokey Club</h1>
+      <h1 id='event3'></h1>
+      <p id='time3'></p>
     </div>
     <div id="progress">
       <img src="img/dot15.png" id="dot" alt="">
@@ -34,36 +33,14 @@
     </div>
   </div>
   <section id="accordion">
-    <h3>Venue 1</h3>
-    <div>
-      <p>
-      Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-      ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-      amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-      odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-      </p>
-      <a href="performer.html">Read More</a>
-    </div>
-    <h3>Venue 2</h3>
-    <div>
-      <p>
-      Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-      purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-      velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-      suscipit faucibus urna.
-      </p>
-      <a href="performer.html">Read More</a>
-    </div>
-    <h3>Venue 3</h3>
-    <div>
-      <p>
-        Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-        purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-        velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-        suscipit faucibus urna.
-        </p>
-        <a href="performer.html">Read More</a>
-    </div>
+    <h3 id='cafe'>Little Café</h3>
+    <div id='cafeEvent'></div>
+
+    <h3>Big Hall</h3>
+    <div id='hallEvent'></div>
+
+    <h3>Smokey Club</h3>
+    <div id='clubEvent'></div>
   </section>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>

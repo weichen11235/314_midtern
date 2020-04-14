@@ -1,5 +1,6 @@
 $( "#accordion" ).accordion({
-  collapsible: true
+  collapsible: true,
+  heightStyle: "fill"
 });
 
 function slide(n) {
@@ -21,3 +22,48 @@ function slide(n) {
   }
   
 }
+
+let cafeArray = [];
+let hallArray = [];
+let clubArray = [];
+
+let getRequest = $.get('http://blmak.github.io/BigMusicClubConclomerateDates.json', function(data, status) {
+  if(status === 'success'){
+    data.forEach(function(event){
+      if(event.venue === "Little Café"){
+        cafeArray.push(event);
+      } else if(event.venue === "Big Hall"){
+        hallArray.push(event);
+      } else{
+        clubArray.push(event);
+      }
+    });
+    insertEvent(cafeArray, '#cafeEvent', '#event1', '#time1');
+    insertEvent(hallArray, '#hallEvent', '#event2', '#time2');
+    insertEvent(clubArray, '#clubEvent', '#event3', '#time3');
+  
+    
+  } else {
+    console.log('fail');
+  }
+})
+
+function insertEvent(eventArray, eventDiv, eventName, eventTime) {
+  let content = '';
+  eventArray.forEach(function(event){
+    content += `<div class='eventContent'>
+                      <p>Artist: ${event.artist}</p>
+                      <p>City: ${event.city} &nbsp State: ${event.state}</p>
+                      <p>Price: ${event.price} &nbsp Currency: ${event.currency}</p>
+                      <p>Date: ${event.date} &nbsp Show time: ${event.show_time}</p>
+                      <a href='#'>Read More</a>
+                    </div>`;
+  })
+  
+  $(eventDiv).append(content);
+  $(eventName).text(eventArray[0].artist);
+  $(eventTime).text(eventArray[0].date + " " + eventArray[0].show_time);
+}
+
+
+
